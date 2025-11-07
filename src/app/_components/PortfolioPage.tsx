@@ -10,7 +10,6 @@ import {
   Mail,
   User,
 } from "lucide-react";
-import { useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
 
 const TECHS = {
@@ -36,17 +35,6 @@ const {
 } = TECHS;
 
 export default function PortfolioPage() {
-  const [activeSection, setActiveSection] = useState("home");
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const projects = [
     {
       id: uuid(),
@@ -107,18 +95,10 @@ export default function PortfolioPage() {
     },
   ];
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
-    setActiveSection(id);
-  };
-
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Navigation */}
-      <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-slate-900/95 backdrop-blur-sm shadow-lg" : "bg-transparent"}`}
-      >
+      <nav className={"fixed top-0 w-full z-50 transition-all duration-300"}>
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -127,11 +107,12 @@ export default function PortfolioPage() {
             <div className="flex gap-6">
               {["home", "about", "skills", "projects", "contact"].map(
                 (section) => (
-                  <button
+                  <a
                     key={section}
-                    type="button"
-                    onClick={() => scrollToSection(section)}
-                    className={`capitalize hover:text-purple-400 transition-colors ${activeSection === section ? "text-purple-400" : ""}`}
+                    href={`#${section}`}
+                    className={
+                      "capitalize hover:text-purple-400 transition-colors"
+                    }
                   >
                     {section === "home"
                       ? "ホーム"
@@ -142,7 +123,7 @@ export default function PortfolioPage() {
                           : section === "projects"
                             ? "制作物"
                             : "お問い合わせ"}
-                  </button>
+                  </a>
                 ),
               )}
             </div>
@@ -153,7 +134,7 @@ export default function PortfolioPage() {
       {/* Hero Section */}
       <section
         id="home"
-        className="min-h-screen flex items-center justify-center px-6 pt-20"
+        className="min-h-screen flex items-center justify-center px-6 pt-20 scroll-smooth"
       >
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-8 animate-fade-in">
@@ -192,20 +173,18 @@ export default function PortfolioPage() {
               <Mail size={24} />
             </a>
           </div>
-          <button
-            type="button"
-            onClick={() => scrollToSection("about")}
-            className="animate-bounce"
-          >
-            <ChevronDown size={32} className="text-purple-400" />
-          </button>
+          <div className="flex justify-center">
+            <a href="#about" className="animate-bounce">
+              <ChevronDown size={32} className="text-purple-400" />
+            </a>
+          </div>
         </div>
       </section>
 
       {/* About Section */}
       <section
         id="about"
-        className="min-h-screen flex items-center justify-center px-6 py-20"
+        className="min-h-screen flex items-center justify-center px-6 py-20 scroll-smooth"
       >
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -250,7 +229,7 @@ export default function PortfolioPage() {
       {/* Skills Section */}
       <section
         id="skills"
-        className="min-h-screen flex items-center justify-center px-6 py-20"
+        className="min-h-screen flex items-center justify-center px-6 py-20 scroll-smooth"
       >
         <div className="max-w-6xl mx-auto w-full">
           <h2 className="text-4xl font-bold mb-12 text-center bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -335,7 +314,7 @@ export default function PortfolioPage() {
       {/* Contact Section */}
       <section
         id="contact"
-        className="min-h-screen flex items-center justify-center px-6 py-20"
+        className="min-h-screen flex items-center justify-center px-6 py-20 scroll-smooth"
       >
         <div className="max-w-2xl mx-auto w-full text-center">
           <h2 className="text-4xl font-bold mb-12 bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
