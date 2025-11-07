@@ -1,15 +1,11 @@
 "use client";
 
-import {
-  Briefcase,
-  ChevronDown,
-  Code,
-  ExternalLink,
-  Github,
-  Linkedin,
-  Mail,
-  User,
-} from "lucide-react";
+import { CiMail } from "react-icons/ci";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { FiBriefcase } from "react-icons/fi";
+import { IoChevronDown, IoCode, IoMail } from "react-icons/io5";
+import { LuGithub } from "react-icons/lu";
+import { RiExternalLinkLine, RiUser3Line } from "react-icons/ri";
 import { v4 as uuid } from "uuid";
 
 const TECHS = {
@@ -139,7 +135,7 @@ export default function PortfolioPage() {
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-8 animate-fade-in">
             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-linear-to-br from-purple-400 to-pink-400 flex items-center justify-center">
-              <User size={64} className="text-white" />
+              <RiUser3Line size={64} className="text-white" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-linear-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
               Wakki
@@ -158,24 +154,24 @@ export default function PortfolioPage() {
               href="https://github.com/ryo28"
               className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all hover:scale-110"
             >
-              <Github size={24} />
+              <LuGithub size={24} />
             </a>
             <a
               href="#"
               className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all hover:scale-110"
             >
-              <Linkedin size={24} />
+              <FaLinkedinIn size={24} />
             </a>
             <a
               href="#"
               className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all hover:scale-110"
             >
-              <Mail size={24} />
+              <CiMail size={24} />
             </a>
           </div>
           <div className="flex justify-center">
             <a href="#about" className="animate-bounce">
-              <ChevronDown size={32} className="text-purple-400" />
+              <IoChevronDown size={32} className="text-purple-400" />
             </a>
           </div>
         </div>
@@ -203,19 +199,25 @@ export default function PortfolioPage() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                 <div className="text-center p-6 bg-white/5 rounded-xl">
-                  <Code size={32} className="mx-auto mb-3 text-purple-400" />
+                  <IoCode size={32} className="mx-auto mb-3 text-purple-400" />
                   <h3 className="font-semibold mb-2">学習時間</h3>
                   <p className="text-2xl font-bold text-purple-400">2000+</p>
                   <p className="text-sm text-gray-400">時間</p>
                 </div>
                 <div className="text-center p-6 bg-white/5 rounded-xl">
-                  <Briefcase size={32} className="mx-auto mb-3 text-pink-400" />
+                  <FiBriefcase
+                    size={32}
+                    className="mx-auto mb-3 text-pink-400"
+                  />
                   <h3 className="font-semibold mb-2">制作物</h3>
                   <p className="text-2xl font-bold text-pink-400">10+</p>
                   <p className="text-sm text-gray-400">プロジェクト</p>
                 </div>
                 <div className="text-center p-6 bg-white/5 rounded-xl">
-                  <Github size={32} className="mx-auto mb-3 text-purple-400" />
+                  <LuGithub
+                    size={32}
+                    className="mx-auto mb-3 text-purple-400"
+                  />
                   <h3 className="font-semibold mb-2">GitHub</h3>
                   <p className="text-2xl font-bold text-purple-400">648+</p>
                   <p className="text-sm text-gray-400">コミット</p>
@@ -294,14 +296,14 @@ export default function PortfolioPage() {
                     href={project.github}
                     className="flex items-center gap-2 text-sm hover:text-purple-400 transition-colors"
                   >
-                    <Github size={16} />
+                    <LuGithub size={16} />
                     Code
                   </a>
                   <a
                     href={project.demo}
                     className="flex items-center gap-2 text-sm hover:text-purple-400 transition-colors"
                   >
-                    <ExternalLink size={16} />
+                    <RiExternalLinkLine size={16} />
                     Demo
                   </a>
                 </div>
@@ -329,7 +331,7 @@ export default function PortfolioPage() {
                 href="mailto:your.email@example.com"
                 className="flex items-center justify-center gap-3 p-4 bg-linear-to-r from-purple-500 to-pink-500 rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all hover:scale-105"
               >
-                <Mail size={24} />
+                <CiMail size={24} />
                 <span className="text-lg font-semibold">
                   your.email@example.com
                 </span>
@@ -339,13 +341,13 @@ export default function PortfolioPage() {
                   href="https://github.com/ryo28"
                   className="p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-all hover:scale-110"
                 >
-                  <Github size={28} />
+                  <FaGithub size={28} />
                 </a>
                 <a
                   href="#"
                   className="p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-all hover:scale-110"
                 >
-                  <Linkedin size={28} />
+                  <FaLinkedinIn size={28} />
                 </a>
               </div>
             </div>
