@@ -72,6 +72,8 @@ export function ProjectsSection() {
               <div className="flex gap-4">
                 <a
                   href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
                   className="flex items-center gap-2 text-sm hover:text-purple-400 transition-colors"
                 >
                   <LuGithub size={16} />
@@ -79,6 +81,7 @@ export function ProjectsSection() {
                 </a>
                 <a
                   href={project.demo}
+                  target="_blank"
                   className="flex items-center gap-2 text-sm hover:text-purple-400 transition-colors"
                 >
                   <RiExternalLinkLine size={16} />

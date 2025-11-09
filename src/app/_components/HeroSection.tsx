@@ -30,18 +30,22 @@ export function HeroSection() {
         <div className="flex gap-6 justify-center mb-12">
           <a
             href="https://github.com/ryo28"
+            target="_blank"
+            rel="noreferrer"
             className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all hover:scale-110"
           >
             <LuGithub size={24} />
           </a>
           <a
-            href="#"
+            href="https://linkedin.com/in/your-profile"
+            target="_blank"
+            rel="noreferrer"
             className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all hover:scale-110"
           >
             <FaLinkedinIn size={24} />
           </a>
           <a
-            href="#"
+            href="mailto:wakki.engineer@gmail.com"
             className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all hover:scale-110"
           >
             <CiMail size={24} />
