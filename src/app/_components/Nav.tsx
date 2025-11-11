@@ -4,7 +4,7 @@ export function Nav() {
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-bold bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Portfolio
+            wakkiPortfolio
           </h1>
           <div className="flex gap-6">
             {["home", "about", "skills", "projects", "contact"].map(
