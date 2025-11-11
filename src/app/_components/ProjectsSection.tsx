@@ -4,7 +4,6 @@ import { v4 as uuid } from "uuid";
 import {
   techBiome,
   techEslint,
-  techHtml,
   techNextjs,
   techTailwindcss,
   techTypescript,
@@ -17,7 +16,7 @@ export function ProjectsSection() {
       title: "ちょいタス",
       description:
         "ちょっとしたことに使えるシンプルなタスク管理アプリケーション。タブ間同期、削除履歴から復元、カラー変更、ドラッグ&ドロップ機能などを実装。",
-      tech: [techHtml, techTypescript, techTailwindcss, techBiome],
+      tech: [techNextjs, techTypescript, techTailwindcss, techBiome],
       github: "https://github.com/ryo28/choitasu",
       demo: "https://choitasu.com",
     },
