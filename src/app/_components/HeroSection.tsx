@@ -3,7 +3,6 @@ import { CiMail } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoChevronDown } from "react-icons/io5";
 import { LuGithub } from "react-icons/lu";
-import { RiUser3Line } from "react-icons/ri";
 
 export function HeroSection() {
   return (
