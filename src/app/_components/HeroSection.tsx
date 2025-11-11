@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CiMail } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoChevronDown } from "react-icons/io5";
@@ -13,7 +14,13 @@ export function HeroSection() {
       <div className="text-center max-w-4xl mx-auto">
         <div className="mb-8 animate-fade-in">
           <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-linear-to-br from-purple-400 to-pink-400 flex items-center justify-center">
-            <RiUser3Line size={64} className="text-white" />
+            <Image
+              src="/portfolio-icon.jpeg"
+              alt="Profile Picture"
+              width={128}
+              height={128}
+              className="rounded-full w-full h-full"
+            />
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-linear-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
             Wakki
