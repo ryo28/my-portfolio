@@ -9,15 +9,15 @@ import { ProjectsSection } from "./ProjectsSection";
 import { SkillsSection } from "./SkillsSection";
 
 export function PortfolioPage() {
-  return (
-    <div className="min-h-screen bg-linear-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-      <Nav />
-      <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <ContactSection />
-      <Footer />
-    </div>
-  );
+	return (
+		<div className="min-h-screen bg-linear-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+			<Nav />
+			<HeroSection />
+			<AboutSection />
+			<SkillsSection />
+			<ProjectsSection />
+			<ContactSection />
+			<Footer />
+		</div>
+	);
 }
