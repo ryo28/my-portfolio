@@ -1,5 +1,5 @@
 import { CiMail } from "react-icons/ci";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { FaGithub, FaXTwitter } from "react-icons/fa6";
 
 export function ContactSection() {
   return (
@@ -37,12 +37,12 @@ export function ContactSection() {
                 <FaGithub size={28} />
               </a>
               <a
-                href="https://linkedin.com/in/your-profile"
+                href="https://x.com/w_a59"
                 target="_blank"
                 rel="noreferrer"
                 className="p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-all hover:scale-110"
               >
-                <FaLinkedinIn size={28} />
+                <FaXTwitter size={28} />
               </a>
             </div>
           </div>

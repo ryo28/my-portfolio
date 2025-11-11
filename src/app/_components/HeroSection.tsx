@@ -1,5 +1,5 @@
 import { CiMail } from "react-icons/ci";
-import { FaLinkedinIn } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 import { IoChevronDown } from "react-icons/io5";
 import { LuGithub } from "react-icons/lu";
 import { RiUser3Line } from "react-icons/ri";
@@ -37,12 +37,12 @@ export function HeroSection() {
             <LuGithub size={24} />
           </a>
           <a
-            href="https://linkedin.com/in/your-profile"
+            href="https://x.com/w_a59"
             target="_blank"
             rel="noreferrer"
             className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all hover:scale-110"
           >
-            <FaLinkedinIn size={24} />
+            <FaXTwitter size={24} />
           </a>
           <a
             href="mailto:wakki.engineer@gmail.com"
