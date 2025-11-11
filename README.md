@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 My Portfolio
 
-## Getting Started
+個人ポートフォリオサイト
 
-First, run the development server:
+## 📝 概要
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Next.js + TypeScript + Tailwind CSSで作成したポートフォリオサイト。
+未経験からのWebエンジニア転職活動用。
+
+## 🛠️ 使用技術
+
+- Next.js 16
+- React 19
+- TypeScript 5
+- Tailwind CSS v4
+- Biome（リンティング・フォーマット）
+- React Icons
+
+## 📁 ファイル構成
+
+```
+src/app/_components/
+├── AboutSection.tsx      # 自己紹介
+├── HeroSection.tsx       # メインビジュアル
+├── SkillsSection.tsx     # スキル一覧
+├── ProjectsSection.tsx   # 制作物
+├── ContactSection.tsx    # 連絡先
+├── Nav.tsx              # ナビゲーション
+├── Footer.tsx           # フッター
+└── constants/           # 定数管理
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 開発環境
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# 依存関係インストール
+pnpm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# 開発サーバー起動
+pnpm dev
+# → http://localhost:3000
+```
 
-## Learn More
+## � コマンド
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm dev      # 開発サーバー
+pnpm build    # ビルド
+pnpm start    # 本番サーバー
+pnpm lint     # Biome チェック
+pnpm format   # Biome フォーマット
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 メモ
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### コンテンツ更新時の編集箇所
+- プロジェクト追加: `ProjectsSection.tsx`
+- スキル追加: `SkillsSection.tsx`, `constants/techs.ts`
+- 自己紹介修正: `AboutSection.tsx`, `HeroSection.tsx`
+- 連絡先更新: `ContactSection.tsx`, `HeroSection.tsx`
 
-## Deploy on Vercel
+### 開発時の注意点
+- Biomeの設定: `biome.json`
+- Tailwind v4使用（設定ファイル不要）
+- 各セクションIDは静的（ページ内リンク用）
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
