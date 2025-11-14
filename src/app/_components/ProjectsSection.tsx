@@ -40,7 +40,6 @@ export function ProjectsSection() {
 	];
 
 	return (
-		// biome-ignore lint/correctness/useUniqueElementIds: ページ内移動のため静的IDが必要
 		<section
 			id="projects"
 			className="flex min-h-screen items-center justify-center px-6 py-20"

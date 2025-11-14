@@ -5,7 +5,6 @@ import { githubCommits, learningTime, production } from "./constants/about";
 
 export function AboutSection() {
 	return (
-		// biome-ignore lint/correctness/useUniqueElementIds: ページ内移動のため静的IDが必要
 		<section
 			id="about"
 			className="flex min-h-screen items-center justify-center scroll-smooth px-6 py-20"

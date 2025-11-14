@@ -6,7 +6,6 @@ import { LuGithub } from "react-icons/lu";
 
 export function HeroSection() {
 	return (
-		// biome-ignore lint/correctness/useUniqueElementIds: ページ内移動のため静的IDが必要
 		<section
 			id="home"
 			className="flex min-h-screen items-center justify-center scroll-smooth px-6 pt-20"

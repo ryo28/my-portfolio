@@ -42,7 +42,6 @@ export function SkillsSection() {
 	];
 
 	return (
-		// biome-ignore lint/correctness/useUniqueElementIds: ページ内移動のため静的IDが必要
 		<section
 			id="skills"
 			className="flex min-h-screen items-center justify-center scroll-smooth px-6 py-20"
